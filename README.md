@@ -12,6 +12,12 @@ In Joplin, open the configuration screen, then under "Plugins" search for "victo
 
 Then under the **Tools** menu, select **Delete all data...**
 
+## If there is still some data left on the sync target
+
+If there is still some data left on the sync target, it may be because your app is not completely in sync. In that case, go to Configuration > Synchronisation > Advanced and click on "Delete local data and re-download from sync target".
+
+Wait for all data to be downloaded, then run Victor, and synchronise again.
+
 ## More info
 
 All notes, notebooks, attachments and tags are deleted.
