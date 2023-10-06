@@ -20,9 +20,7 @@ Wait for all data to be downloaded, then run Victor, and synchronise again.
 
 ## More info
 
-All notes, notebooks, attachments and tags are deleted.
-
-Note revisions however will **not** be deleted and those can potentially be large. To delete them too, go to **Configuration** > **Note History** and select "Disable note history". You might want to close and restart the application to ensure the note revisions are deleted too.
+All notes, notebooks, attachments, tags and revisions are deleted.
 
 ## License
 

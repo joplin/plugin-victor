@@ -39,6 +39,7 @@ joplin.plugins.register({
 					'notes',
 					'folders',
 					'tags',
+					'revisions',
 				];
 
 				const report:Record<string, number> = {
@@ -46,6 +47,7 @@ joplin.plugins.register({
 					notes: 0,
 					folders: 0,
 					tags: 0,
+					revisions: 0,
 				};
 
 				const updateLogPanel = async (completed:boolean) => {
@@ -63,11 +65,22 @@ joplin.plugins.register({
 
 				for (const tableName of tablesToDelete) {
 					while (true) {
-						const page = await joplin.data.get([tableName], {
-							page: 1,
-							fields: ['id'],
-							limit: 50,
-						});
+						let page:any = null;
+
+						try {
+							page = await joplin.data.get([tableName], {
+								page: 1,
+								fields: ['id'],
+								limit: 50,
+							});
+						} catch (error) {
+							if (tableName === 'revisions') {
+								console.warn('Processing revisions table failed - it may not be supported by Joplin current version:', error);
+								continue;
+							}
+
+							throw error;
+						}
 
 						report[tableName] += page.items.length;
 
