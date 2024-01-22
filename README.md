@@ -1,5 +1,7 @@
 # Victor Plugin for Joplin
 
+<img style="float:left; margin-right: 15px; margin-bottom:15px;" src="images/icon-128.png"/>
+
 [Victor](https://www.youtube.com/watch?v=QE6eiPD2z-Y) helps you delete all your Joplin data and start over. It can sometimes be useful for example when you want to clear a sync target you do not have full access to. In that case you would invoke Victor, delete all your data, then synchronise with the service (which in turn will delete the remote data).
 
 Of course the plugin should be used very carefully because once deleted the data cannot be recovered. In fact, after having used it, it is better to disable or even uninstall it to prevent any accidental use.
